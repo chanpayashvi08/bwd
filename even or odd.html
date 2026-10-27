@@ -1,0 +1,36 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Even or Odd</title>
+</head>
+<body>
+    <h2>Check Even or Odd Number</h2>
+
+    Enter a number:
+    <input type="number" id="num">
+
+    <button onclick="checkNumber()">Check</button>
+
+    <h3 id="result"></h3>
+
+    <script>
+        function checkNumber() {
+            let num = Number(document.getElementById("num").value);
+
+            if (document.getElementById("num").value === "") {
+                document.getElementById("result").innerHTML =
+                    "Please enter a number.";
+            }
+            else if (num % 2 == 0) {
+                document.getElementById("result").innerHTML =
+                    num + " is an Even Number.";
+            }
+            else {
+                document.getElementById("result").innerHTML =
+                    num + " is an Odd Number.";
+            }
+        }
+    </script>
+</body>
+</html>
